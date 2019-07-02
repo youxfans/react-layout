@@ -12,3 +12,21 @@ git config --local user.email "412386861@qq.com"
 git remote add origin https://github.com/youxfans/react-layout.git
 git push -u origin master
 ```
+
+### 开发
+
+### 部署
+
+```
+yarn add gh-pages
+
+// package.json
++ "homepage": "https://youxfans.github.io/react-layout",
+  "scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+
+// 部署
+npm run deploy
+
+```
