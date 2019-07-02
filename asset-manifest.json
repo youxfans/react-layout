@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/react-layout/static/css/main.2cce8147.chunk.css",
-    "main.js": "/react-layout/static/js/main.ffcb7851.chunk.js",
-    "main.js.map": "/react-layout/static/js/main.ffcb7851.chunk.js.map",
-    "runtime~main.js": "/react-layout/static/js/runtime~main.40fcf83f.js",
-    "runtime~main.js.map": "/react-layout/static/js/runtime~main.40fcf83f.js.map",
-    "static/js/2.b41502e9.chunk.js": "/react-layout/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/react-layout/static/js/2.b41502e9.chunk.js.map",
+    "main.css": "/react-layout/static/css/main.6a5a8cb3.chunk.css",
+    "main.js": "/react-layout/static/js/main.bd716e92.chunk.js",
+    "main.js.map": "/react-layout/static/js/main.bd716e92.chunk.js.map",
+    "runtime~main.js": "/react-layout/static/js/runtime~main.c939bc71.js",
+    "runtime~main.js.map": "/react-layout/static/js/runtime~main.c939bc71.js.map",
+    "static/css/2.d53b30ea.chunk.css": "/react-layout/static/css/2.d53b30ea.chunk.css",
+    "static/js/2.889efffd.chunk.js": "/react-layout/static/js/2.889efffd.chunk.js",
+    "static/js/2.889efffd.chunk.js.map": "/react-layout/static/js/2.889efffd.chunk.js.map",
+    "static/js/3.9065dbe6.chunk.js": "/react-layout/static/js/3.9065dbe6.chunk.js",
+    "static/js/3.9065dbe6.chunk.js.map": "/react-layout/static/js/3.9065dbe6.chunk.js.map",
+    "static/js/4.fee4e5e6.chunk.js": "/react-layout/static/js/4.fee4e5e6.chunk.js",
+    "static/js/4.fee4e5e6.chunk.js.map": "/react-layout/static/js/4.fee4e5e6.chunk.js.map",
     "index.html": "/react-layout/index.html",
-    "precache-manifest.4ad0511b5324ca080365a3de4c6088c6.js": "/react-layout/precache-manifest.4ad0511b5324ca080365a3de4c6088c6.js",
+    "precache-manifest.b33f1ba65d7ff8cdbb224ae902d6ab76.js": "/react-layout/precache-manifest.b33f1ba65d7ff8cdbb224ae902d6ab76.js",
     "service-worker.js": "/react-layout/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/react-layout/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/react-layout/static/media/logo.5d5d9eef.svg"
+    "static/css/2.d53b30ea.chunk.css.map": "/react-layout/static/css/2.d53b30ea.chunk.css.map",
+    "static/css/main.6a5a8cb3.chunk.css.map": "/react-layout/static/css/main.6a5a8cb3.chunk.css.map"
   }
 }
