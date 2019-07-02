@@ -13,7 +13,7 @@ const Page = lazy(() => import('./routes/Page'));
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react-layout">
       <Layout style={{ minHeight: '100vh' }}>
         <Route component={({ location }) => <SiderBar location={location} />} />
         <Layout>
