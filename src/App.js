@@ -1,30 +1,25 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Layout } from 'antd';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SiderBar from './layout/SiderBar';
-import Breadcrumb from './layout/Breadcrumb';
+// import Breadcrumb from './layout/Breadcrumb';
+import Routes from './Routes';
 
 import './App.less';
 
 const { Header, Content, Footer } = Layout;
 
-const Home = lazy(() => import('./routes/Home'));
-const Page = lazy(() => import('./routes/Page'));
-
 function App() {
   return (
     <Router basename="/react-layout">
       <Layout style={{ minHeight: '100vh' }}>
-        <Route component={({ location }) => <SiderBar location={location} />} />
+        <Route component={(props) => <SiderBar {...props} />} />
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }} />
-          <Content style={{ margin: '0 16px' }}>
-            <Route component={({ location }) => <Breadcrumb location={location} />} />
+          <Content style={{ margin: '16px' }}>
+            {/* <Route component={(props) => <Breadcrumb {...props} />} /> */}
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <Suspense fallback={<div>Loading...</div>}>
-                <Route exact path="/" component={Home}/>
-                <Route path="/page" component={Page}/>
-              </Suspense>
+              <Routes />
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>React Layout ©2018 Created by Yousfans</Footer>

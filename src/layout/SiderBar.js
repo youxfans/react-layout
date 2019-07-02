@@ -31,9 +31,9 @@ export default function SiderBar (props) {
             </span>
           }
         >
-          <Menu.Item key="3">Tom</Menu.Item>
-          <Menu.Item key="4">Bill</Menu.Item>
-          <Menu.Item key="5">Alex</Menu.Item>
+          <Menu.Item key="/user/Tom"><Link to="/user/Tom">Tom</Link></Menu.Item>
+          <Menu.Item key="/user/Bill"><Link to="/user/Bill">Bill</Link></Menu.Item>
+          <Menu.Item key="/user/Alex"><Link to="/user/Alex">Alex</Link></Menu.Item>
         </SubMenu>
         <SubMenu
           key="sub2"
