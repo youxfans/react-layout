@@ -15,6 +15,8 @@ git push -u origin master
 
 ### 开发
 
+修改package.json pagehome 
+
 ### 部署
 
 ```
