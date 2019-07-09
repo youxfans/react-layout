@@ -1,12 +1,17 @@
 import React from 'react';
-import { Breadcrumb as BreadcrumbCompoment } from 'antd';
+import { Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom';
 
-export default function Breadcrumb (props) {
+export default function (props) {
+  console.log(props);
   return (
-    <BreadcrumbCompoment style={{ margin: '16px 0' }}>
-      <BreadcrumbCompoment.Item><Link to='/'>Home</Link></BreadcrumbCompoment.Item>
-      <BreadcrumbCompoment.Item>Bill</BreadcrumbCompoment.Item>
-    </BreadcrumbCompoment>
+    <Breadcrumb style={{ margin: '16px 0' }}>
+      {/* <Breadcrumb.Item><Link to='/'>Home</Link></Breadcrumb.Item> */}
+      {
+        props.location.pathname.split('/').map(path => (
+          <Breadcrumb.Item key={path}><Link to={'/' + path}>{path}</Link></Breadcrumb.Item>
+        ))
+      }
+    </Breadcrumb>
   )
 }

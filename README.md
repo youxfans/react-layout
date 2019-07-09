@@ -1,5 +1,7 @@
 ## 铸造流程
 
+README
+
 ### 初始化
 
 ```
@@ -14,6 +16,8 @@ git push -u origin master
 ```
 
 ### 开发
+
+修改package.json pagehome 
 
 ### 部署
 
