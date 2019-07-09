@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-export default function SiderBar (props) {
+export default function SiderBar (location: Location) {
   return (
     <Sider collapsible>
       <div className="logo" />
-      <Menu theme="dark" defaultSelectedKeys={['/']} selectedKeys={[props.location.pathname]} mode="inline">
+      <Menu theme="dark" defaultSelectedKeys={['/']} selectedKeys={[location.pathname]} mode="inline">
         <Menu.Item key="/">
           <Link to="/">
             <Icon type="home" />
