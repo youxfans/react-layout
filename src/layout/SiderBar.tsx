@@ -40,11 +40,11 @@ export default function SiderBar (location: Location) {
           title={
             <span>
               <Icon type="team" />
-              <span>Team</span>
+              <span>Util</span>
             </span>
           }
         >
-          <Menu.Item key="6">Team 1</Menu.Item>
+          <Menu.Item key="/mobx"><Link to="/mobx">Mobx</Link></Menu.Item>
           <Menu.Item key="8">Team 2</Menu.Item>
         </SubMenu>
         <Menu.Item key="9">
