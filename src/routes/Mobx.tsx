@@ -1,9 +1,9 @@
 import React from "react";
 import { observable, computed } from "mobx";
 import { observer } from "mobx-react";
+import { Button } from "antd";
 
 interface todo { title: number, finished?: boolean }
-
 
 class TodoList {
   @observable todos: todo[] = [];
@@ -12,7 +12,7 @@ class TodoList {
   }
 }
 
-type TodoListViewProps = { todoList: TodoList }
+// type TodoListViewProps = { todoList: TodoList }
 
 @observer
 class TodoListView extends React.Component<{ todoList: TodoList }> {
@@ -27,7 +27,7 @@ class TodoListView extends React.Component<{ todoList: TodoList }> {
             <TodoView todo={todo} key={todo.title} />
           ))}
         </ul>
-        <button>Add</button>
+        <Button>Add</Button>
         Tasks left: {this.props.todoList.unfinishedTodoCount}
       </div>
     )
