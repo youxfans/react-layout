@@ -1,7 +1,6 @@
 import React from 'react';
 
 function testable(isLoading: boolean) {
-  // props.isLoading = true;
   return function(target: { isLoading: boolean; }) {
     target.isLoading = isLoading;
   }
@@ -18,13 +17,34 @@ class MyClass {
 }
 
 export default function Page () {
-  console.log(MyTestableClass.isLoading);
-  console.log(MyClass.isLoading);
   return (
     <div>
-      <h1>Page</h1>
+      <h1>Experimental Decorators</h1>
+      <h2>装饰器（实验阶段）</h2>
       <div>
-        认识自己的不足
+        <pre>
+{`
+function testable(isLoading: boolean) {
+  // props.isLoading = true;
+  return function(target: { isLoading: boolean; }) {
+    target.isLoading = isLoading;
+  }
+}
+
+@testable(true)
+class MyTestableClass {
+    static isLoading: any;
+}
+    
+@testable(false)
+class MyClass {
+    static isLoading: any;
+}
+
+console.log(MyTestableClass.isLoading); // output: true
+console.log(MyClass.isLoading); // output: false
+`}
+        </pre>
       </div>
     </div>
   )
