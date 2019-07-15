@@ -1,0 +1,8 @@
+h1 {
+  text-align: center;
+}
+
+#percent-loaded {
+  height: 20px;
+  background: #433;
+}

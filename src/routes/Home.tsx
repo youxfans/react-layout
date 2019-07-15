@@ -9,22 +9,32 @@ interface location {
 export default function Home() {
   const [locations, setLocations] = useState<location[]>([]);
   const canvasRef = useRef(null);
-  function drawHeart(ctx: CanvasRenderingContext2D, x: number, y: number, R: number, rot: number) {
-    ctx.save();
-    ctx.translate(x, y);
-    ctx.rotate(rot / 180 * Math.PI);
-    ctx.scale(R, R);
-    heartPath(ctx);
-    ctx.strokeStyle = "red";
-    ctx.lineWidth = 3;
-    ctx.shadowColor = "gray";
-    ctx.shadowOffsetX = 5;
-    ctx.shadowOffsetY = 5;
-    ctx.shadowBlur = 5;
-    ctx.fill();
-    // ctx.stroke();
-    ctx.restore();
-  }
+  // function drawHeart(ctx: CanvasRenderingContext2D, x: number, y: number, R: number, rot: number) {
+  //   ctx.save();
+  //   ctx.translate(x, y);
+  //   ctx.rotate(rot / 180 * Math.PI);
+  //   ctx.scale(R, R);
+  //   heartPath(ctx);
+  //   ctx.strokeStyle = "red";
+  //   ctx.lineWidth = 3;
+  //   ctx.shadowColor = "gray";
+  //   ctx.shadowOffsetX = 5;
+  //   ctx.shadowOffsetY = 5;
+  //   ctx.shadowBlur = 5;
+  //   ctx.fill();
+  //   // ctx.stroke();
+  //   ctx.restore();
+  // }
+  // function heartPath(ctx: CanvasRenderingContext2D) {
+  //   ctx.beginPath();
+  //   ctx.arc(-1, 0, 1, Math.PI, 0, false);
+  //   ctx.arc(1, 0, 1, Math.PI, 0, false);
+  //   //貝塞尔曲线画心
+  //   ctx.bezierCurveTo(1.9, 1.2, 0.6, 1.6, 0, 3.0);
+  //   ctx.bezierCurveTo(-0.6, 1.6, -1.9, 1.2, -2, 0);
+  //   ctx.closePath();
+  // }
+
   function draw(ctx: CanvasRenderingContext2D, location: location, offsetTop: number, offsetLeft: number) {
     ctx.fillStyle = 'deepskyblue'
     ctx.shadowColor = 'dodgerblue'
@@ -34,15 +44,6 @@ export default function Home() {
     ctx.translate((location.x - offsetLeft) / SCALE, (location.y - offsetTop) / SCALE)
     ctx.fill(HOOK_PATH)
     ctx.restore()
-  }
-  function heartPath(ctx: CanvasRenderingContext2D) {
-    ctx.beginPath();
-    ctx.arc(-1, 0, 1, Math.PI, 0, false);
-    ctx.arc(1, 0, 1, Math.PI, 0, false);
-    //貝塞尔曲线画心
-    ctx.bezierCurveTo(1.9, 1.2, 0.6, 1.6, 0, 3.0);
-    ctx.bezierCurveTo(-0.6, 1.6, -1.9, 1.2, -2, 0);
-    ctx.closePath();
   }
   useEffect(() => {
     console.log(canvasRef);

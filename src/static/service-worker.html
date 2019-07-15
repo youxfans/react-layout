@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Service Worker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h1>Service Worker</h1>
+    <p>Cache</p>
+    <div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" />
+  </section>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registerion) {
+            console.log('ServiceWorker registerion successful wath scope: ', registerion.scope);
+          }, function(err) {
+            console.log('ServiceWorker registerion failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
