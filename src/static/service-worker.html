@@ -19,7 +19,8 @@
         navigator.serviceWorker.register('/sw.js')
           .then(function(registerion) {
             console.log('ServiceWorker registerion successful wath scope: ', registerion.scope);
-          }, function(err) {
+          })
+          .catch(function(err) {
             console.log('ServiceWorker registerion failed: ', err);
           });
       });
