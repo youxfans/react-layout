@@ -41,8 +41,8 @@ class MyClass {
     static isLoading: any;
 }
 
-console.log(MyTestableClass.isLoading); // output: true
-console.log(MyClass.isLoading); // output: false
+console.log(MyTestableClass.isLoading); // output: ${MyTestableClass.isLoading}
+console.log(MyClass.isLoading); // output: ${MyClass.isLoading}
 `}
         </pre>
       </div>

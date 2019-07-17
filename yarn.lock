@@ -1329,10 +1329,10 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/node@^12.6.1":
-  version "12.6.2"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.6.2.tgz#a5ccec6abb6060d5f20d256fb03ed743e9774999"
-  integrity sha1-pczsartgYNXyDSVvsD7XQ+l3SZk=
+"@types/node@^12.6.2":
+  version "12.6.3"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.6.3.tgz?cache=0&sync_timestamp=1563209522399&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.6.3.tgz#44d507c5634f85e7164707ca36bba21b5213d487"
+  integrity sha1-RNUHxWNPhecWRwfKNruiG1IT1Ic=
 
 "@types/prop-types@*":
   version "15.7.1"
@@ -1711,9 +1711,9 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^3.20.0:
+antd@^3.20.3:
   version "3.20.3"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-3.20.3.tgz#a9a8acad523933f5a0daeb5931d49b9aa1ce9e29"
+  resolved "https://registry.npm.taobao.org/antd/download/antd-3.20.3.tgz?cache=0&sync_timestamp=1563176798261&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-3.20.3.tgz#a9a8acad523933f5a0daeb5931d49b9aa1ce9e29"
   integrity sha1-qaisrVI5M/Wg2utZMdSbmqHOnik=
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"

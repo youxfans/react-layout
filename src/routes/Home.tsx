@@ -46,7 +46,6 @@ export default function Home() {
     ctx.restore()
   }
   useEffect(() => {
-    console.log(canvasRef);
     const canvas: HTMLCanvasElement = canvasRef.current!;
     const ctx: CanvasRenderingContext2D = canvas.getContext('2d')!;
     // drawHeart(ctx, 400, 400, 40, 20);
