@@ -1,5 +1,9 @@
 import React from 'react';
-export default function Users(props: { match: { params: { id: string | undefined } } }) {
+import { RouteComponentProps } from 'react-router';
+
+type Params =  { id: string };
+
+export default function Users(props: RouteComponentProps<Params>) {
   return (
     <h1>{props.match.params.id || 'Not ID'}</h1>
   )

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
+import { RouteChildrenProps } from 'react-router';
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-export default function SiderBar({ location }: { location: Location }) {
-  const path = (location.pathname.match(/\/\w+/g) || []).reverse();
+export default function SiderBar(props: RouteChildrenProps) {
+  const path = (props.location.pathname.match(/\/\w+/g) || []).reverse();
   return (
     <Sider collapsible>
       <div className="logo" />
