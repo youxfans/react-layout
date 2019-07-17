@@ -13,7 +13,7 @@ function App() {
   return (
     <Router basename="/react-layout">
       <Layout style={{ minHeight: '100vh' }}>
-        <Route component={(location: Location) => <SiderBar {...location} />} />
+        <Route component={(props: { location: Location }) => <SiderBar {...props} />} />
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }} />
           <Content style={{ margin: '16px' }}>

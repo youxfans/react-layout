@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-export default function SiderBar (location: Location) {
+export default function SiderBar ({ location } : { location: Location }) {
   return (
     <Sider collapsible>
       <div className="logo" />
