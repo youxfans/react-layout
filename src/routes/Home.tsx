@@ -61,8 +61,8 @@ export default function Home() {
         height={600}
         style={{ border: '1px solid #aaa', display: 'block', margin: '50px auto' }}
         onMouseMove={e => {
-          const newLocations = [...locations, { x: e.clientX, y: e.clientY }];
-          setLocations(newLocations)
+          const newLocations = { x: e.pageX, y: e.pageY };
+          setLocations(l => [...l, newLocations])
         }}
       />
     </div>

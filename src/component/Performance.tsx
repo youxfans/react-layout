@@ -24,7 +24,7 @@ export default function () {
         SetPerformanceTiming(performance.timing.toJSON());
       });
     }
-  });
+  }, []);
   return (
     <div>
       <h2>Performance!</h2>

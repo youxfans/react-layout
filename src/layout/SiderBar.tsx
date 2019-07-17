@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
-export default function SiderBar ({ location } : { location: Location }) {
+export default function SiderBar({ location }: { location: Location }) {
+  const path = (location.pathname.match(/\/\w+/g) || []).reverse();
   return (
     <Sider collapsible>
       <div className="logo" />
-      <Menu theme="dark" defaultSelectedKeys={['/']} selectedKeys={[location.pathname]} mode="inline">
+      <Menu theme="dark" defaultSelectedKeys={['/']} defaultOpenKeys={[path[1]]} selectedKeys={[path[0] || '/']} mode="inline">
         <Menu.Item key="/">
           <Link to="/">
             <Icon type="home" />
@@ -23,7 +24,7 @@ export default function SiderBar ({ location } : { location: Location }) {
           </Link>
         </Menu.Item>
         <SubMenu
-          key="sub1"
+          key="/user"
           title={
             <span>
               <Icon type="user" />
@@ -31,12 +32,12 @@ export default function SiderBar ({ location } : { location: Location }) {
             </span>
           }
         >
-          <Menu.Item key="/user/Tom"><Link to="/user/Tom">Tom</Link></Menu.Item>
-          <Menu.Item key="/user/Bill"><Link to="/user/Bill">Bill</Link></Menu.Item>
-          <Menu.Item key="/user/Alex"><Link to="/user/Alex">Alex</Link></Menu.Item>
+          <Menu.Item key="/Tom"><Link to="/user/Tom">Tom</Link></Menu.Item>
+          <Menu.Item key="/Bill"><Link to="/user/Bill">Bill</Link></Menu.Item>
+          <Menu.Item key="/Alex"><Link to="/user/Alex">Alex</Link></Menu.Item>
         </SubMenu>
         <SubMenu
-          key="sub2"
+          key="/util"
           title={
             <span>
               <Icon type="team" />
@@ -44,12 +45,14 @@ export default function SiderBar ({ location } : { location: Location }) {
             </span>
           }
         >
-          <Menu.Item key="/mobx"><Link to="/mobx">Mobx</Link></Menu.Item>
-          <Menu.Item key="8">Team 2</Menu.Item>
+          <Menu.Item key="/mobx"><Link to="/util/mobx">Mobx</Link></Menu.Item>
+          <Menu.Item key="/performance"><Link to="/util/performance">Performance</Link></Menu.Item>
         </SubMenu>
         <Menu.Item key="9">
-          <Icon type="file" />
-          <span>File</span>
+          <Link to="/file">
+            <Icon type="file" />
+            <span>File</span>
+          </Link>
         </Menu.Item>
       </Menu>
     </Sider>
