@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{335:function(e,t,a){"use strict";a.r(t);a(325);var n=a(330),r=(a(193),a(199)),i=a(1),o=a.n(i),s=a(14);t.default=function(){return o.a.createElement("div",null,o.a.createElement(n.a,{status:"404",title:"404",subTitle:"Sorry, the page you visited does not exist.",extra:o.a.createElement(r.a,{type:"primary"},o.a.createElement(s.b,{to:"/"},"Back Home"))}),",")}}}]);
+//# sourceMappingURL=10.814f592c.chunk.js.map
