@@ -1,32 +1,11 @@
 import React from 'react';
-import { Layout } from 'antd';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import SiderBar from './layout/SiderBar';
-import Footer from './layout/Footer';
-import Routes from './Routes';
+import { BrowserRouter } from 'react-router-dom';
+import Main from './layout/Main';
 
-import './App.less';
-
-const { Header, Content } = Layout;
-
-function App() {
+export default () => {
   return (
-    <Router basename="/react-layout">
-      <Layout style={{ minHeight: '100vh' }}>
-        <Route render={(props) => <SiderBar {...props} />} />
-        <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
-          <Content style={{ margin: '16px' }}>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <Routes />
-            </div>
-          </Content>
-          <Footer />
-        </Layout>
-      </Layout>
-    </Router>
-  );
-
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
+  )
 }
-
-export default App;

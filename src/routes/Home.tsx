@@ -6,7 +6,7 @@ interface location {
   x: number,
   y: number
 }
-export default function Home() {
+function Home() {
   const [locations, setLocations] = useState<location[]>([]);
   const canvasRef = useRef(null);
   // function drawHeart(ctx: CanvasRenderingContext2D, x: number, y: number, R: number, rot: number) {
@@ -68,3 +68,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;

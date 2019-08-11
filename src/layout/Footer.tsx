@@ -3,10 +3,10 @@ import { Layout } from 'antd';
 
 const { Footer } = Layout;
 
-export default function() {
+export default () => {
   return (
-    <Footer style={{ background: '#fff', textAlign: 'center' }}>
-      <p>React Layout ©2018 Created by Yousfans</p>
+    <Footer className="footer">
+      <p>宠益联盟后台系统 ©{new Date().getFullYear()}</p>
     </Footer>
   )
 }
