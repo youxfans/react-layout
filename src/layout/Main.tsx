@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router';
+import { Route, Redirect, withRouter } from 'react-router';
 import { Layout } from 'antd';
 import SiderBar from './SiderBar';
 import Header from './Header';
@@ -10,7 +10,7 @@ import './layout.less';
 
 const { Content } = Layout;
 
-export default () => {
+export default withRouter(() => {
   const isLogged = sessionStorage.getItem("token");
   if (isLogged) {
     return (
@@ -34,4 +34,4 @@ export default () => {
       <Redirect to="/login" />
     </Layout>
   )
-}
+})

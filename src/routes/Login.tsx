@@ -1,5 +1,5 @@
 import React, { FormEvent } from 'react';
-import { Button, Form, Input, Icon, Card} from 'antd';
+import { Button, Form, Input, Icon, Card, message} from 'antd';
 import { RouteComponentProps } from 'react-router';
 import { FormComponentProps } from 'antd/lib/form';
 import request from '../util/request';
@@ -18,11 +18,13 @@ function Login(props: RouteComponentProps & FormComponentProps) {
             "pwd": values.password
           }
         });
-        if (loginResult.auth && loginResult.auth.token) {
+        if (loginResult.auth && loginResult.auth.token && loginResult.info.role === 'admin') {
           sessionStorage.setItem("token", loginResult.auth.token);
           sessionStorage.setItem("avatarUrl", loginResult.info.avatarUrl);
           sessionStorage.setItem("nickName", loginResult.info.nickName);
           props.history.push('/');
+        } else {
+          message.error('账号密码 / 权限错误')
         }
       }
     });
