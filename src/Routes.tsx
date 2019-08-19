@@ -14,7 +14,7 @@ export default () => {
     <Suspense fallback={<Spin style={{ textAlign: 'center' }}/>}>
       <Switch>
         <Redirect from='/login' to='/' />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Page} />
         <Route path="/page" component={Page} />
         <Route path="/user/:id" component={User} />
         <Route path="/util/mobx" component={Mobx} />

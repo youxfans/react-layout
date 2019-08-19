@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { RouteChildrenProps, withRouter } from 'react-router';
 
 const { Sider } = Layout;
-const { SubMenu } = Menu;
+// const { SubMenu } = Menu;
 
 function SiderBar(props: RouteChildrenProps) {
   const path = (props.location.pathname.match(/\/\w+/g) || []).reverse();
@@ -12,19 +12,19 @@ function SiderBar(props: RouteChildrenProps) {
     <Sider collapsible>
       <div className="logo">宠益联盟后台系统</div>
       <Menu theme="dark" defaultSelectedKeys={['/']} defaultOpenKeys={[path[1]]} selectedKeys={[path[0] || '/']} mode="inline">
-        <Menu.Item key="/">
+        {/* <Menu.Item key="/">
           <Link to="/">
             <Icon type="home" />
-            <span>Home</span>
+            <span>用户分析</span>
           </Link>
-        </Menu.Item>
-        <Menu.Item key="/page">
-          <Link to="/page">
+        </Menu.Item> */}
+        <Menu.Item key="/">
+          <Link to="/">
             <Icon type="desktop" />
-            <span>Pgae</span>
+            <span>宠物审核</span>
           </Link>
         </Menu.Item>
-        <SubMenu
+        {/* <SubMenu
           key="/user"
           title={
             <span>
@@ -54,7 +54,7 @@ function SiderBar(props: RouteChildrenProps) {
             <Icon type="file" />
             <span>File</span>
           </Link>
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
     </Sider>
   )

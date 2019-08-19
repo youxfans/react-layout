@@ -11,11 +11,15 @@ function Login(props: RouteComponentProps & FormComponentProps) {
     e.preventDefault();
     validateFields(async (err, values) => {
       if (!err) {
-        const loginResult = await request('auth', 'POST', {
-          "type": "normal",
-          "data": {
-            "id": values.username,
-            "pwd": values.password
+        const loginResult = await request({
+          api: 'auth',
+          method: 'POST',
+          body: {
+            "type": "normal",
+            "data": {
+              "id": values.username,
+              "pwd": values.password
+            }
           }
         });
         if (loginResult.auth && loginResult.auth.token && loginResult.info.role === 'admin') {
@@ -36,28 +40,28 @@ function Login(props: RouteComponentProps & FormComponentProps) {
         <Form onSubmit={handleSubmit} className="login-form">
           <Form.Item>
             {getFieldDecorator('username', {
-              rules: [{ required: true, message: 'Please input your username!' }],
+              rules: [{ required: true, message: '请输入用户名!' }],
             })(
               <Input
                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                placeholder="Username"
+                placeholder="用户名"
               />,
             )}
           </Form.Item>
           <Form.Item>
             {getFieldDecorator('password', {
-              rules: [{ required: true, message: 'Please input your Password!' }],
+              rules: [{ required: true, message: '请输入密码!' }],
             })(
               <Input
                 prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 type="password"
-                placeholder="Password"
+                placeholder="密码"
               />,
             )}
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit" className="login-form-button">
-              Log in
+              登陆              
             </Button>
           </Form.Item>
         </Form>
