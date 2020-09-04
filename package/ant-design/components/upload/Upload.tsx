@@ -163,7 +163,7 @@ class Upload extends React.Component<UploadProps, UploadState> {
     const { onRemove } = this.props;
     const { fileList } = this.state;
 
-    Promise.resolve(typeof onRemove === 'function' ? onRemove(file) : onRemove).then(ret => {
+    Promise.resolve(typeof onRemove === 'function' ? onRemove(file) : onRemove).then((ret) => {
       // Prevent removing file
       if (ret === false) {
         return;
@@ -320,7 +320,7 @@ class Upload extends React.Component<UploadProps, UploadState> {
         prefixCls,
         {
           [`${prefixCls}-drag`]: true,
-          [`${prefixCls}-drag-uploading`]: fileList.some(file => file.status === 'uploading'),
+          [`${prefixCls}-drag-uploading`]: fileList.some((file) => file.status === 'uploading'),
           [`${prefixCls}-drag-hover`]: dragState === 'dragover',
           [`${prefixCls}-disabled`]: disabled,
         },

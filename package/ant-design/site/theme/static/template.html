@@ -82,8 +82,7 @@
     <div id="react-content">
       {{ content | safe }}
     </div>
-    {% for jsFile in manifest["js"] %}
-    <script src="{{ root }}{{ jsFile }}"></script>
+    {% for jsFile in manifest["js"] %}<script src="{{ root }}{{ jsFile }}"></script>
     {% endfor %}
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72788897-1"></script>

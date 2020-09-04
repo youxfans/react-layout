@@ -201,7 +201,7 @@ class Demo extends React.Component {
         </Form>
         <Table
           {...this.state}
-          columns={columns.map(item => ({ ...item, ellipsis: state.ellipsis }))}
+          columns={columns.map(item => ({ ...item, ellipsis: state. ellipsis }))}
           dataSource={state.hasData ? data : null}
         />
       </div>

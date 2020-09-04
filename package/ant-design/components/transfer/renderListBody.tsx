@@ -15,7 +15,7 @@ export const OmitProps = tuple(
   'body',
   'checkedKeys',
 );
-export type OmitProp = typeof OmitProps[number];
+export type OmitProp = (typeof OmitProps)[number];
 type PartialTransferListProps = Omit<TransferListProps, OmitProp>;
 
 export interface TransferListBodyProps extends PartialTransferListProps {

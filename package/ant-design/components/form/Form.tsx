@@ -29,7 +29,7 @@ export interface FormCreateOption<T> {
 }
 
 const FormLayouts = tuple('horizontal', 'inline', 'vertical');
-export type FormLayout = typeof FormLayouts[number];
+export type FormLayout = (typeof FormLayouts)[number];
 
 export interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
   layout?: FormLayout;

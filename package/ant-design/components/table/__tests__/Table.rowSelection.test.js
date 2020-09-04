@@ -737,19 +737,9 @@ describe('Table.rowSelection', () => {
   });
 
   it('clear selection className when remove `rowSelection`', () => {
-    const dataSource = [
-      { id: 1, name: 'Hello', age: 10 },
-      { id: 2, name: 'World', age: 30 },
-    ];
+    const dataSource = [{ id: 1, name: 'Hello', age: 10 }, { id: 2, name: 'World', age: 30 }];
 
-    const wrapper = mount(
-      <Table
-        columns={columns}
-        dataSource={dataSource}
-        rowSelection={{}}
-        expandedRowRender={() => null}
-      />,
-    );
+    const wrapper = mount(<Table columns={columns} dataSource={dataSource} rowSelection={{}} expandedRowRender={() => null} />);
     const checkboxes = wrapper.find('input');
     checkboxes.at(1).simulate('change', { target: { checked: true } });
 

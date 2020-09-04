@@ -552,8 +552,8 @@ describe('Upload List', () => {
         items={items}
         locale={{ downloadFile: '' }}
         showUploadList={{ showDownloadIcon: true }}
-      />,
-    ).instance();
+       />,
+     ).instance();
     expect(wrapper.handleDownload(file)).toBe(undefined);
   });
 
@@ -589,7 +589,7 @@ describe('Upload List', () => {
     expect(wrapper.find('.ant-upload-list-item-thumbnail').length).toBe(2);
   });
 
-  it('extname should work correctly when url exists', done => {
+  it('extname should work correctly when url exists', (done) => {
     const items = [{ status: 'done', uid: 'upload-list-item', url: '/example' }];
     const wrapper = mount(
       <UploadList

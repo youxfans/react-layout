@@ -75,7 +75,9 @@ describe('WeekPicker', () => {
 
   it('should support allowClear', () => {
     const onChange = jest.fn();
-    const wrapper = mount(<WeekPicker defaultValue={moment()} onChange={onChange} />);
+    const wrapper = mount(
+      <WeekPicker defaultValue={moment()} onChange={onChange} />,
+    );
     wrapper
       .find('.ant-calendar-picker-clear')
       .hostNodes()

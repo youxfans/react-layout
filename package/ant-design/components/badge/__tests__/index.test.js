@@ -129,5 +129,5 @@ describe('Badge', () => {
       </div>,
     );
     expect(wrapper).toMatchSnapshot();
-  });
+  })
 });

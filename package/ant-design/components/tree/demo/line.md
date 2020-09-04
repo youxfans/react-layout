@@ -22,15 +22,15 @@ class Demo extends React.Component {
   state = {
     showLine: true,
     showIcon: false,
-  };
+  }
 
   onShowLineChange = showLine => {
     this.setState({ showLine });
-  };
+  }
 
   onShowIconChange = showIcon => {
     this.setState({ showIcon });
-  };
+  }
 
   render() {
     const { showIcon, showLine } = this.state;

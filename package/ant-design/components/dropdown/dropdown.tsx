@@ -15,7 +15,7 @@ const Placements = tuple(
   'bottomCenter',
   'bottomRight',
 );
-type Placement = typeof Placements[number];
+type Placement = (typeof Placements)[number];
 
 type OverlayFunc = () => React.ReactNode;
 
