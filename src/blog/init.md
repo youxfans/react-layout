@@ -1,7 +1,7 @@
 ### 初始化
 
 ```
-npx create-raect-app react-layout
+npx create-react-app react-layout
 cd react-layout
 ## 配置本地仓库账号
 git config --local user.name "youxfans"         
